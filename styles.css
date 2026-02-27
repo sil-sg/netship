@@ -1,0 +1,58 @@
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.nav {
+    scroll-target-group: auto;
+}
+
+.nav-link {
+    transition: all .25s;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 3.75px;
+        border-radius: 2px;
+        bottom: 0;
+        transition: all .25s;
+        transform: translateY(50%);
+    }
+}
+
+.nav-link:target-current {
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 4px 32px rgba(27,212,73,0.99);
+    
+    &::before {
+        width: 100%;
+    }
+}
+
+
+.title {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) ;
+}
+
+.fadeInRight {
+    animation: fadeInRight 1s ease;
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+}
