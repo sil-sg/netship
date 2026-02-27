@@ -5,10 +5,13 @@ const bgBlur = document.querySelector(".blur")
 const navLinks = document.querySelectorAll(".nav-link")
 
 navLinks.forEach(i => {
-    i.onclick = () => {
-        menu.classList.remove("active")
-        bgBlur.classList.remove("active")
-        btnMenu.classList.remove("active")
+    i.addEventListener("click", () => {
+        setTimeout(() => {
+            menu.classList.remove("active")
+            bgBlur.classList.remove("active")
+            btnMenu.classList.remove("active")
+            
+        }, 50)
     }
 })
 
