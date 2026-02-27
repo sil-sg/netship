@@ -12,7 +12,7 @@ navLinks.forEach(i => {
             btnMenu.classList.remove("active")
             
         }, 50)
-    }
+    })
 })
 
 btnMenu.onclick = () => toggleMenu()
